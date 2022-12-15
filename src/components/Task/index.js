@@ -1,13 +1,11 @@
 import './styles.css';
 
-const Index = ({task}) => {
-
+const Index = ({task, onDragStart, onDragTaskOver}) => {
     return (
         <div draggable={true}
-             onDragEnd={(e) => {}}
-             onDrag={(e) => {}}
-             onDragEnter={(e) => console.log({e}, 'onDragEnter')}
-             className='task'><div>{task.name}</div>
+             onDragOver={(e) => onDragTaskOver(e, task.id)}
+             onDragStart={(e) => onDragStart(e, task.id)}
+             className='task'><div><div>{task.id}</div>{task.name}</div>
         </div>
     );
 }

@@ -4,17 +4,17 @@ import Section from "../../components/Section/index";
 import './styles.css';
 
 const TasksManager = () => {
-    const {sections, addSection, addTask} = useContext(DropDownProvider);
+    const {sections, addSection, addTask, draggableTask } = useContext(DropDownProvider);
 
     return (
             <div>
                 <div className='title'>Task manager</div>
-                <div className='tasks'>
+                <div className='sections'>
                     {sections?.map((section) => (
-                        <Section key={section.id} section={section} addTask={addTask} />
+                        <Section key={section.id} section={section} addTask={addTask} draggableTask={draggableTask} />
                     ))}
                     <div onClick={addSection} className='add_section'>
-                        <button >Add Section +</button>
+                        <button>Add Section +</button>
                     </div>
                 </div>
             </div>

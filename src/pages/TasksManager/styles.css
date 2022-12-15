@@ -1,6 +1,18 @@
-.tasks {
+.sections {
     display: flex;
 }
 .title {
     text-align: center;
+}
+.add_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border: 2px dashed rgba(75,11,49,.156);
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #ffffff50;
+    line-height: 1.6;
+    width: 270px;
 }
