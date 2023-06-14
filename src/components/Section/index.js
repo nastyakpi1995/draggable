@@ -1,6 +1,6 @@
 import Task from "../Task/index";
 import './styles.css';
-import {useState} from "react";
+import { useState } from "react";
 
 const Section = ({section, addTask, draggableTask}) => {
     const {sectionLabel, tasks, id} = section;
