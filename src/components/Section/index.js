@@ -10,7 +10,6 @@ const Section = ({section, addTask, draggableTask}) => {
         const data = {sectionId: id, taskId: taskId}
         e.dataTransfer.setData('Text', JSON.stringify(data))
     }
-
     const onDrop = (e) => {
         e.preventDefault();
         const dataTransfer = JSON.parse(e.dataTransfer.getData('Text'));
@@ -23,8 +22,6 @@ const Section = ({section, addTask, draggableTask}) => {
 
     const onDragSectionOver = (e) => {
         e.preventDefault();
-        // const target = e.target
-        // e.target.style.border = "4px dotted green";
     }
     const onDragTaskOver = (e, id) => {
         e.preventDefault();
