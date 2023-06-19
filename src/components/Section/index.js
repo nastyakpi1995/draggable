@@ -19,10 +19,10 @@ const Section = ({section, addTask, draggableTask}) => {
         }
         draggableTask(dataTransfer, whereChoseTaskIdMove)
     }
-
     const onDragSectionOver = (e) => {
         e.preventDefault();
     }
+
     const onDragTaskOver = (e, id) => {
         e.preventDefault();
         setChoseTaskId(id);
