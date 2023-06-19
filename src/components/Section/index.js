@@ -33,6 +33,7 @@ const Section = ({section, addTask, draggableTask}) => {
              onDrop={onDrop}
              onDragOver={onDragSectionOver}
         >
+            <div>hi</div>
             <div className='head'>
                 <div className='label'>{sectionLabel}</div>
                 <button className='button' onClick={() => addTask(id)}>add task</button>
